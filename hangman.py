@@ -31,12 +31,12 @@ def hangman():
         print('Current word: ', ''.join(word_list))
 
         user_letter = input('Guess a letter: ').upper()
-        if user_letter in alphabet - used_letters:
+        if user_letter in alphabet - used_letters:  # one letter cen be used only onced
             used_letters.add(user_letter)   # add a letter in used_letter list
-            if user_letter in word_letters:
+            if user_letter in word_letters: # check if the user_letter match with any word_letter
                 word_letters.remove(user_letter)    # remove the matching letter from word_letter
             else:
-                lives = lives - 1   # takes away a life if wrong
+                lives = lives - 1   # takes away a life if the user letter dosen't match
                 print('Letter is not in the word.')
 
         elif user_letter in used_letters:
