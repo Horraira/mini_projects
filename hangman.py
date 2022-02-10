@@ -12,6 +12,7 @@ def get_valid_word(words):
 
 def hangman():
     word = get_valid_word(words)
+    # print(word)
     hint = [letter for letter in word[:1]] + ['-' for letter in word[2:]] + [letter for letter in word[-1:]]
     print('Hint: ', ''.join(hint))
     word_letters = set(word)    # letters in the word
@@ -36,7 +37,7 @@ def hangman():
             if user_letter in word_letters: # check if the user_letter match with any word_letter
                 word_letters.remove(user_letter)    # remove the matching letter from word_letter
             else:
-                lives = lives - 1   # takes away a life if the user letter dosen't match
+                lives = lives - 1   # takes away a life if the user letter doesn't match
                 print('Letter is not in the word.')
 
         elif user_letter in used_letters:
@@ -51,4 +52,10 @@ def hangman():
         print('You guessed the word', word, '!!')
 
 
-hangman()
+flag = 'Y'
+while flag == 'Y':
+    hangman()
+    flag = input('Wanna Play again Y/N: ').upper()
+
+
+#hangman()
