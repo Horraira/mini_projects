@@ -1,5 +1,6 @@
 # list comprehension
 
+from multiprocessing.reduction import duplicate
 from multiprocessing.sharedctypes import Value
 
 
@@ -41,3 +42,12 @@ print(my_dict)
 
 my_dict2 = {key : value ** 3 for key,value in simpple_dict.items() if value % 2 == 0}
 print(my_dict2)
+
+# find the duplicates
+
+some_list = [char for char in "abcbdmnn"]
+
+duplicate_list = list ({char for char in some_list if some_list.count(char) > 1})
+
+print(some_list)
+print(duplicate_list)
