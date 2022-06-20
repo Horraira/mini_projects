@@ -1,9 +1,5 @@
 # list comprehension
 
-from multiprocessing.reduction import duplicate
-from multiprocessing.sharedctypes import Value
-
-
 my_list = [letter for letter in 'NAHAR']
 # print(my_list)
 
