@@ -13,5 +13,5 @@ enMessage = ' '.join(list(map(preChar, message)))
 deMessage = ' '.join(list(map(nextChar, message)))
 
 
-print('Encoded Message:', enMessage.replace(" ", "").replace("0", " "))
-print('Decoded Message:', deMessage.replace(" ", "").replace("2", " "))
+print('SENHAS Message:', enMessage.replace(" ", "").replace("0", " "))
+print('Normal Message:', deMessage.replace(" ", "").replace("2", " "))
